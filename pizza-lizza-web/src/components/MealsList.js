@@ -7,15 +7,17 @@ import React from 'react';
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 
 const MealsList = (props) => {
-  // let mealsListStyle = {
-  //   mealsContainer: {
-  //     borderRadius: 5,
-  //     height: 250,
-  //     width: 250,
-  //     backgroundColor: 'red'
-  //   }
-  // }
-  // let { mealsContainer }  = mealsListStyle
+  let mealsListStyle = {
+    container: {
+      borderRadius: 5,
+      height: 250,
+      width: 250,
+      backgroundColor: 'tomato',
+      margin: 9
+
+    }
+  }
+  let { container }  = mealsListStyle
   let meals = props.meals;
   console.log(meals)
 
@@ -24,7 +26,7 @@ const MealsList = (props) => {
     <div>
       {meals.map(meal => {
         return (
-          <div className="col-md-4" key={meal.id} style={{backgroundColor: 'red', width: 250, height: 250}}>
+          <div className="col-md-4" key={meal.id} style={container}>
             <Card >
               <CardImg style={{borderRadius: 3}}width="100%" src={meal.image} alt={meal.alt} />
               <CardImgOverlay>
