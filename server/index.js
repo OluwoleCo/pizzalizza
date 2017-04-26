@@ -19,31 +19,88 @@ let pizza = [
         id: 1,
         image: '',
         name: 'Peperoni',
-        alt: ''
+        alt: '',
+        price: 2500
       },
       {
         id: 2,
         image: '',
         name:'Cheese Pizza',
-        alt: ''
+        alt: '',
+        price: 2000
+        
       },
       {
         id: 3,
         image: '',
         name: 'Suya Pizza',
-        alt: ''
+        alt: '',
+        price: 250
+        
       },
       {
         id: 4,
         image: '',
         name: 'Peperoni',
-        alt: ''
+        alt: '',
+        price: 2500
+        
       },
       {
         id: 5,
         image: '',
         name:'Cheese Pizza',
+        alt: '',
+        price: 2500
+        
+      },
+      {
+        id: 6,
+        image: '',
+        name: 'Suya Pizza',
         alt: ''
+      }
+]
+
+let fries = [
+        {
+        id: 1,
+        image: '',
+        name: 'Peperoni',
+        alt: '',
+        price: 2500
+      },
+      {
+        id: 2,
+        image: '',
+        name:'Cheese Pizza',
+        alt: '',
+        price: 2000
+        
+      },
+      {
+        id: 3,
+        image: '',
+        name: 'Suya Pizza',
+        alt: '',
+        price: 250
+        
+      },
+      {
+        id: 4,
+        image: '',
+        name: 'Peperoni',
+        alt: '',
+        price: 2500
+        
+      },
+      {
+        id: 5,
+        image: '',
+        name:'Cheese Pizza',
+        alt: '',
+        price: 2500
+        
       },
       {
         id: 6,
@@ -55,6 +112,10 @@ let pizza = [
 
 app.get('/pizza', function(req, res) {
     res.send(pizza);
+})
+
+app.get('/fries', function(req, res) {
+    res.send(fries);
 })
 
 

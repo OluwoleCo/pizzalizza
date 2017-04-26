@@ -1,33 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { HashRouter as Router, Route, Switch} from 'react-router-dom'
-import MealsListContainer from './container/MealsListContainer';
-import {MealsForm} from './components/MealsForm'
-import PizzaContainer from './container/PizzaContainer';
-import Header from './components/Header'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+
+import App from './App'
 
 
-
-class Index extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Router>
-          <Switch>
-            <Route exact path='/' component={MealsListContainer}/>
-            <Route path='/form' component={MealsForm}/>
-            <Route exact path='/pizza' component={PizzaContainer}/>
-            <Route render={() => <h1>Page NOT Found</h1>} />
-          </Switch>
-        </Router>
-      </div>
-    )
-  }
-}
+// class Index extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <Router>
+//           <Header />
+//           <Switch>
+//             <Route exact path='/' component={MealsListContainer}/>
+//             <Route exact path='/app' component={App}/>
+//             <Route path='/form' component={MealsForm}/>
+//             <Route exact path='/pizza' component={PizzaContainer}/>
+//             <Route render={() => <h1>Page NOT Found</h1>} />
+//           </Switch>
+//         </Router>
+//       </div>
+//     )
+//   }
+// }
 
 ReactDOM.render(
-  <Index />,
+  <App />,
   document.getElementById('root')
 );
